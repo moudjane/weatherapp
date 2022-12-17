@@ -52,8 +52,16 @@ function CurrentWeather() {
             weatherz(city);
         }
     };
-    return (
 
+    const regionNames = new Intl.DisplayNames(
+        ['en'], { type: 'region' }
+    );
+
+    // console.log(regionNames.of('US'));
+    // console.log(regionNames.of('GB'));
+    // console.log(regionNames.of('DE'));
+    // console.log(regionNames.of('AU'));
+    return (
         <div className='App'>
             {/* <h1>WEATHEEEEEEEEER</h1> */}
             <div className="bg" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
@@ -66,11 +74,13 @@ function CurrentWeather() {
                 {/* <button onClick={weatherz}>LETSSSGO</button> */}
 
             </div>
-
             {weather.main ?
                 <div className='weather-mainz'>
                     <div className='weather-main2'>
-                        <p className='city'>{weather.name}</p>
+                        <span className='city'>{weather.name}</span>
+                        <span className='country'>{regionNames.of(weather.sys.country)}</span>
+
+                        {/* <p className='city'>{weather.sys.country}</p> */}
                     </div>
                 </div>
                 : null}
@@ -101,7 +111,6 @@ function CurrentWeather() {
                     </div>
                 </div>
                 : null}
-
         </div >
     )
 }

@@ -109,12 +109,21 @@ h1 {
     font-size: 20px;
     padding: 5px;
     z-index: 100;
+    width: 90%;
 }
 
 .city {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     margin: 0;
+    padding-right: 2.5px;
+}
+
+.country {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 2.5px;
 }
 
 .temp {
