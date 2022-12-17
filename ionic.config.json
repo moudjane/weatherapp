@@ -1,0 +1,8 @@
+{
+  "name": "weatherionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "53b629c8"
+}
